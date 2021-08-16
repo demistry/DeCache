@@ -19,6 +19,6 @@ protocol Store {
     func getBoolean(key: String) -> Bool
     func getString(key: String) -> String
     func getDouble(key: String) -> Double
-    func getArray<T: Decodable>(key: String) -> [T]
+    func getArray<T: Decodable>(type: T, key: String) -> [T]
     func getData(key: String) -> Data?
 }

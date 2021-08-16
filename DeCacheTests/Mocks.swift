@@ -51,12 +51,12 @@ class TestStore: Store {
         cache[key] as! Double
     }
     
-    func getArray<T>(key: String) -> [T] where T : Decodable {
+    func getArray<T>(type: T, key: String) -> [T] where T : Decodable {
         cache[key] as! [T]
     }
     
     func getData(key: String) -> Data? {
-        cache[key] as! Data
+        cache[key] as? Data
     }
     
     

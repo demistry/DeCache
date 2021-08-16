@@ -65,7 +65,7 @@ internal class LocalStore: Store {
         userDefaults.double(forKey: key)
     }
     
-    func getArray<T: Decodable>(key: String) -> [T] {
+    func getArray<T: Decodable>(type: T, key: String) -> [T] {
         let data = getData(key: key)
         if let data = data {
             let array = try? JSONDecoder().decode([T].self, from: data)

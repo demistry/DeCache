@@ -36,7 +36,7 @@ class DeCacheTests: XCTestCase {
     func testArraySave() throws {
         let testArr = ["Hi", "Hello"]
         testStore.saveArray(value: testArr, key: "array")
-        XCTAssertEqual(testStore.getArray(key: "array"), testArr)
+        XCTAssertEqual(testStore.getArray(type: "".self, key: "array"), testArr)
     }
     
     func testDoubleSave() throws {
