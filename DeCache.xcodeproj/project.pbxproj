@@ -10,6 +10,11 @@
 		344F0D3126CA061000C3632B /* DeCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 344F0D2726CA061000C3632B /* DeCache.framework */; };
 		344F0D3626CA061000C3632B /* DeCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344F0D3526CA061000C3632B /* DeCacheTests.swift */; };
 		344F0D3826CA061000C3632B /* DeCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 344F0D2A26CA061000C3632B /* DeCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34E0E98426CA06E600B5902B /* DeCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E0E98326CA06E600B5902B /* DeCache.swift */; };
+		34E0E98A26CA073000B5902B /* DECacheKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E0E98926CA073000B5902B /* DECacheKey.swift */; };
+		34E0E99026CA085700B5902B /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E0E98F26CA085700B5902B /* Store.swift */; };
+		34E0E99426CA0B9A00B5902B /* DECacheErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E0E99326CA0B9A00B5902B /* DECacheErrors.swift */; };
+		34E0E99826CA0ED700B5902B /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E0E99726CA0ED700B5902B /* LocalStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,11 @@
 		344F0D3026CA061000C3632B /* DeCacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeCacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		344F0D3526CA061000C3632B /* DeCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeCacheTests.swift; sourceTree = "<group>"; };
 		344F0D3726CA061000C3632B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34E0E98326CA06E600B5902B /* DeCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeCache.swift; sourceTree = "<group>"; };
+		34E0E98926CA073000B5902B /* DECacheKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DECacheKey.swift; sourceTree = "<group>"; };
+		34E0E98F26CA085700B5902B /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		34E0E99326CA0B9A00B5902B /* DECacheErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DECacheErrors.swift; sourceTree = "<group>"; };
+		34E0E99726CA0ED700B5902B /* LocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,7 @@
 		344F0D2926CA061000C3632B /* DeCache */ = {
 			isa = PBXGroup;
 			children = (
+				34E0E98226CA06E600B5902B /* Resources */,
 				344F0D2A26CA061000C3632B /* DeCache.h */,
 				344F0D2B26CA061000C3632B /* Info.plist */,
 			);
@@ -84,6 +95,18 @@
 				344F0D3726CA061000C3632B /* Info.plist */,
 			);
 			path = DeCacheTests;
+			sourceTree = "<group>";
+		};
+		34E0E98226CA06E600B5902B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				34E0E98326CA06E600B5902B /* DeCache.swift */,
+				34E0E98926CA073000B5902B /* DECacheKey.swift */,
+				34E0E98F26CA085700B5902B /* Store.swift */,
+				34E0E99326CA0B9A00B5902B /* DECacheErrors.swift */,
+				34E0E99726CA0ED700B5902B /* LocalStore.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +217,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34E0E99426CA0B9A00B5902B /* DECacheErrors.swift in Sources */,
+				34E0E99026CA085700B5902B /* Store.swift in Sources */,
+				34E0E98426CA06E600B5902B /* DeCache.swift in Sources */,
+				34E0E99826CA0ED700B5902B /* LocalStore.swift in Sources */,
+				34E0E98A26CA073000B5902B /* DECacheKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +417,7 @@
 		344F0D3F26CA061000C3632B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A8SA62ZA26;
 				INFOPLIST_FILE = DeCacheTests/Info.plist;
@@ -407,6 +436,7 @@
 		344F0D4026CA061000C3632B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A8SA62ZA26;
 				INFOPLIST_FILE = DeCacheTests/Info.plist;
