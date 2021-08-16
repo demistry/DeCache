@@ -65,9 +65,9 @@
 		344F0D1D26CA061000C3632B = {
 			isa = PBXGroup;
 			children = (
-				344F0D2926CA061000C3632B /* DeCache */,
-				344F0D3426CA061000C3632B /* DeCacheTests */,
 				344F0D2826CA061000C3632B /* Products */,
+				34E0E9F726CA1FDA00B5902B /* Source */,
+				34E0E9F826CA1FE100B5902B /* Tests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,14 +80,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		344F0D2926CA061000C3632B /* DeCache */ = {
+		344F0D2926CA061000C3632B /* DeCachePackage */ = {
 			isa = PBXGroup;
 			children = (
 				34E0E98226CA06E600B5902B /* Resources */,
 				344F0D2A26CA061000C3632B /* DeCache.h */,
 				344F0D2B26CA061000C3632B /* Info.plist */,
 			);
-			path = DeCache;
+			path = DeCachePackage;
 			sourceTree = "<group>";
 		};
 		344F0D3426CA061000C3632B /* DeCacheTests */ = {
@@ -110,6 +110,22 @@
 				34E0E99726CA0ED700B5902B /* LocalStore.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		34E0E9F726CA1FDA00B5902B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				344F0D2926CA061000C3632B /* DeCachePackage */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		34E0E9F826CA1FE100B5902B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				344F0D3426CA061000C3632B /* DeCacheTests */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,7 +398,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				EXCLUDED_ARCHS = "";
-				INFOPLIST_FILE = DeCache/Info.plist;
+				INFOPLIST_FILE = Source/DeCachePackage/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -411,7 +427,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				EXCLUDED_ARCHS = "";
-				INFOPLIST_FILE = DeCache/Info.plist;
+				INFOPLIST_FILE = Source/DeCachePackage/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
