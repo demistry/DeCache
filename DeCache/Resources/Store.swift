@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 protocol Store {
     func saveInt(value: Int, key: String)
     func saveBoolean(value: Bool, key: String)

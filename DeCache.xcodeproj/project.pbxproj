@@ -15,7 +15,7 @@
 		34E0E99026CA085700B5902B /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E0E98F26CA085700B5902B /* Store.swift */; };
 		34E0E99426CA0B9A00B5902B /* DECacheErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E0E99326CA0B9A00B5902B /* DECacheErrors.swift */; };
 		34E0E99826CA0ED700B5902B /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E0E99726CA0ED700B5902B /* LocalStore.swift */; };
-		34E0E99C26CA0F1B00B5902B /* DECacheObjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E0E99B26CA0F1B00B5902B /* DECacheObjectType.swift */; };
+		34E0E9A426CA122700B5902B /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E0E9A326CA122700B5902B /* Mocks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +40,7 @@
 		34E0E98F26CA085700B5902B /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		34E0E99326CA0B9A00B5902B /* DECacheErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DECacheErrors.swift; sourceTree = "<group>"; };
 		34E0E99726CA0ED700B5902B /* LocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
-		34E0E99B26CA0F1B00B5902B /* DECacheObjectType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DECacheObjectType.swift; sourceTree = "<group>"; };
+		34E0E9A326CA122700B5902B /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +95,7 @@
 			children = (
 				344F0D3526CA061000C3632B /* DeCacheTests.swift */,
 				344F0D3726CA061000C3632B /* Info.plist */,
+				34E0E9A326CA122700B5902B /* Mocks.swift */,
 			);
 			path = DeCacheTests;
 			sourceTree = "<group>";
@@ -107,7 +108,6 @@
 				34E0E98F26CA085700B5902B /* Store.swift */,
 				34E0E99326CA0B9A00B5902B /* DECacheErrors.swift */,
 				34E0E99726CA0ED700B5902B /* LocalStore.swift */,
-				34E0E99B26CA0F1B00B5902B /* DECacheObjectType.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -225,7 +225,6 @@
 				34E0E98426CA06E600B5902B /* DeCache.swift in Sources */,
 				34E0E99826CA0ED700B5902B /* LocalStore.swift in Sources */,
 				34E0E98A26CA073000B5902B /* DECacheKey.swift in Sources */,
-				34E0E99C26CA0F1B00B5902B /* DECacheObjectType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				344F0D3626CA061000C3632B /* DeCacheTests.swift in Sources */,
+				34E0E9A426CA122700B5902B /* Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

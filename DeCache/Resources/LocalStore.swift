@@ -7,7 +7,7 @@
 
 import Foundation
 
-class LocalStore: Store {
+internal class LocalStore: Store {
     
     private let userDefaults: UserDefaults
     init() {

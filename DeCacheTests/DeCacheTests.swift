@@ -9,25 +9,53 @@ import XCTest
 @testable import DeCache
 
 class DeCacheTests: XCTestCase {
-
+    var testStore: Store!
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        testStore = TestStore()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        testStore = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testIntSave() throws {
+        testStore.saveInt(value: 15, key: "int")
+        XCTAssertEqual(testStore.getInt(key: "int"), 15)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testStringSave() throws {
+        testStore.saveString(value: "Hi", key: "string")
+        XCTAssertEqual(testStore.getString(key: "string"), "Hi")
+    }
+    
+    func testBoolSave() throws {
+        testStore.saveBoolean(value: true, key: "bool")
+        XCTAssertTrue(testStore.getBoolean(key: "bool"))
+    }
+    
+    func testArraySave() throws {
+        let testArr = ["Hi", "Hello"]
+        testStore.saveArray(value: testArr, key: "array")
+        XCTAssertEqual(testStore.getArray(key: "array"), testArr)
+    }
+    
+    func testDoubleSave() throws {
+        testStore.saveDouble(value: 15.0, key: "double")
+        XCTAssertEqual(testStore.getDouble(key: "double"), 15.0)
+    }
+    
+    func testObjectSave() throws {
+        let object = MockObject()
+        testStore.saveObject(value: object, key: "object")
+        let retrievedData = testStore.getData(key: "object")!
+        let retrievedObject = try! JSONDecoder().decode(MockObject.self, from: retrievedData)
+        XCTAssertEqual(object, retrievedObject)
+    }
+    
+    fileprivate struct MockObject: Codable, Equatable {
+        var id: UUID = UUID.init()
+        static func == (lhs: DeCacheTests.MockObject, rhs: DeCacheTests.MockObject) -> Bool {
+            lhs.id == rhs.id
         }
     }
-
 }
