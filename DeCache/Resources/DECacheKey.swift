@@ -8,13 +8,6 @@
 import Foundation
 
 public protocol DECacheKey {
-    var hash: String { get }
-}
-
-enum Key: String, DECacheKey {
-    case key
-    var hash: String {
-        return self.rawValue
-    }
+    var keyLiteral: String { get }
 }
 
